@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* .back {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.valueInput {
+  width: 200px;
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.valueInput:focus {
+  text-indent: 10px;
+}
+.valueBtn,
+.toggleBtn {
+  width: 80px;
+  height: 30px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-size: 20px;
+}
+.toggleBtn {
+  margin-left: 10px;
+}
+.itemindex {
+  margin-top: 10px;
+  width: 300px;
+  height: auto;
+}
+.obj {
+  display: flex;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+}
+.obj .i-no {
+  flex-grow: 1;
+}
+
+.circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  background: white;
+  border: 1px solid black;
+} */

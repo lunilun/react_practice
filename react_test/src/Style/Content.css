@@ -1,0 +1,203 @@
+/* inner */
+@import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+/* header*/
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+button:hover {
+  cursor: pointer;
+}
+.Content {
+  width: 80%;
+  height: auto; /*auto로 바꿔야될듯*/
+  margin: 0 auto;
+}
+.Content .content_inner {
+  display: flex;
+  height: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/* itemList */
+.Content .content_inner .content_itemList {
+  width: 100%;
+  height: 100%;
+  flex: 1.5;
+  font-size: 25px;
+  font-family: "Dongle", sans-serif;
+}
+.Content .content_inner .content_itemList .item {
+  display: flex;
+  height: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.Content .content_inner .content_itemList .item img {
+  flex: 0.3;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px;
+}
+.Content .content_inner .content_itemList .item .info {
+  flex: 1;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+}
+.Content .content_inner .content_itemList .item .info .title:hover {
+  color: blue;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+.Content .content_inner .content_itemList .item .vendor {
+  position: relative;
+  flex: 0.5;
+  margin-left: 2px;
+}
+.Content .content_inner .content_itemList .item .vendor .counting {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.Content .content_inner .content_itemList .item .vendor .counting #evBtn {
+  width: 50px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background: white;
+}
+.Content
+  .content_inner
+  .content_itemList
+  .item
+  .vendor
+  .counting
+  :nth-child(1) {
+  margin-right: 10px;
+}
+.Content
+  .content_inner
+  .content_itemList
+  .item
+  .vendor
+  .counting
+  :nth-child(3) {
+  margin-left: 10px;
+}
+.Content
+  .content_inner
+  .content_itemList
+  .item
+  .vendor
+  .counting
+  :nth-child(4) {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* cartList */
+.Content .content_inner .content_cartList {
+  width: 100%;
+  flex: 0.6;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: 5px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.Content .content_inner .content_cartList .cover {
+  height: 800px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.Content .content_inner .content_cartList .cover::-webkit-scrollbar {
+  border-radius: 10px;
+}
+.Content .content_inner .content_cartList .cover::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: white;
+}
+.Content .content_inner .content_cartList .cover::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: black;
+}
+.Content
+  .content_inner
+  .content_cartList
+  .cover::-webkit-slider-runnable-track {
+  border-radius: 10px;
+  background: white;
+}
+
+.Content .content_inner .content_cartList .sumPrice {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.Content .content_inner .content_cartList .sumPrice span {
+  font-family: "Dongle", sans-serif;
+  line-height: 60px;
+}
+.Content .content_inner .content_cartList .sumPrice span:nth-child(1) {
+  font-size: 30px;
+  float: left;
+  margin-left: 50px;
+}
+.Content .content_inner .content_cartList .sumPrice span:nth-child(2) {
+  font-size: 40px;
+  float: right;
+  margin-right: 20px;
+}
+.Content .content_inner .content_cartList .item {
+  width: 98%;
+  height: auto;
+  padding: 2px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.Content .content_inner .content_cartList .item .info {
+  height: 100%;
+  display: inline-block;
+  flex: 1;
+  font-family: "Dongle", sans-serif;
+  font-size: 25px;
+}
+.Content .content_inner .content_cartList .item .info div {
+  display: inline-block;
+}
+.Content .content_inner .content_cartList .item .info div:nth-child(1) {
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+.Content .content_inner .content_cartList .item .info div:nth-child(2) {
+  float: right;
+  margin-right: 10px;
+}
+.Content .content_inner .content_cartList .item .sum {
+  border-top: 1px solid black;
+  height: 100%;
+  flex: 0.5;
+  text-align: right;
+}
+.Content .content_inner .content_cartList .item .sum span {
+  margin-right: 10px;
+  font-family: "Dongle", sans-serif;
+  font-size: 25px;
+}
+.Content .content_inner .content_cartList .item .delBtn {
+  background: red;
+  border: none;
+  width: 50%;
+  height: 30px;
+  margin: 0 auto;
+  color: white;
+  border-radius: 5px;
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "Dongle", sans-serif;
+}

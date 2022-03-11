@@ -1,0 +1,126 @@
+// import React, { useState } from 'react';
+// import Counter from './component/Counter.js';
+
+// function App() {
+//   const [no, setNo] = useState(0);
+//   const [value, setValue] = useState('');
+//   const [state, setState] = useState(true);
+
+//   const i_list = [
+//     {no:0, value: 'counting Item' },
+//     {no:1,value:'counting Item'},
+//     {no:2,value:'counting Item'},
+//     {no:3,value:'counting Item'},
+//     {no:4,value:'counting Item'},
+//     {no:5,value:'counting Item'},
+//     {no:6,value:'counting Item'},
+//     {no:7,value:'counting Item'},
+//     {no:8,value:'counting Item'},
+//     {no:9,value:'counting Item'},
+//     {no:10,value:'counting Item'},
+//   ]
+
+//   const setItemValue = (e) => {
+//     setValue(value + e.key);
+//   };
+
+//   const viewItme = () => {
+//     setNo(no + 1);
+//     setValue('');
+//   };
+
+//   const toggleItem = () => {
+//     setState(!state);
+//   };
+
+//   const mapping = i_list.map(i => {
+//     return (
+//       <div className='obj' key={i.no}>
+//         <div className='i-no'>{i.no}</div>
+//         <div className='i-value'>{i.value}</div>
+//       </div>
+//     )
+//   });
+
+//   // const condition = state ? <div className="circle" style={{ visibility: 'visible' }}></div> : <div className="circle" style={{ visibility: 'hidden' }}></div>;
+//   const condition = state ?
+//     mapping : <Counter btnName={value}/>;
+
+//   return (
+//     <div className="App">
+//       <h1>Item</h1>
+
+//       <div className="back">
+//         <input className='valueInput' type="text" placeholder='value' onKeyUp={setItemValue}/>
+//         <button className='valueBtn' onClick={viewItme}>ADD</button>
+//         <button className='toggleBtn' onClick={toggleItem}>Toggle</button>
+//         {/* {condition} */}
+//       </div>
+
+//       <div className="itemindex">
+//         {condition}
+//       </div>
+
+      
+//     </div>
+//   );
+// }
+
+// //사용률
+// //onClick(100%), onKeyup(100%), useState(in form)(50%), useEffect, component(100%), prop(100%), if(100%), for(100%)
+// //https://www.youtube.com/watch?v=OWSxLU-qnTg&list=PLB7CpjPWqHOuf62H44TMkMIsqfkIzcEcX&index=11 next? #11
+//https://msh322.tistory.com/195?category=912205
+// export default App;
+
+import React, { useState } from 'react';
+
+function PracticeTodoList(){
+  const [textValue, setTextValue] = useState('');
+  const [enters, setEnters] = useState([]);
+
+  const onChange = (e) => {
+    setTextValue(e.target.value);
+  };
+
+  const onCreate = () => {
+    setEnters(enters => [...enters, {no:0,value:textValue}]); //...--> 이게 아직 뭔진 모르겠다만 대강 어캐돌아가는진 이해됨
+    setTextValue('');
+  };
+
+  const mapping = <b>값:{enters.map((ent, index) => (<div key={index}>{ent.no}/{ent.value}</div>))}</b>;
+
+  return (
+    <div className="app">
+      <h1 className="title">List</h1>
+      <input
+       name="textValue"
+       value={textValue}
+       onChange={onChange}
+       placeholder="할 일을 입력하세요."
+      />
+      <button onClick={onCreate} className="todoBtn">등록하기</button>
+      <br />
+      {mapping}
+    </div>
+    )
+};
+
+export default PracticeTodoList;
+
+
+//count.js(component)
+import React, { useState } from 'react';
+
+const Counter = (props) => {
+  const [count, setCount] = useState(0);
+  const addCount = () => {
+      setCount(count+1);
+  };
+    
+  const clickString = props.btnName || "none Click";
+  return (
+    <button onClick={addCount}>{clickString}{count}</button>
+  );
+};
+
+export default Counter;
