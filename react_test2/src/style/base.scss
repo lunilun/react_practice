@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Festive&display=swap");
+
+$inner_txt: "Dongle", sans-serif;
+$con_txt: "Festive", cursive;
+$side_txt: "Supermercado One", cursive;
+
+@mixin background-set {
+  background: url("../Img/back.jpg") no-repeat center;
+  background-size: cover;
+}
+
+@mixin font-set($size, $style) {
+  font-family: $style;
+  font-size: $size;
+}
+
+@mixin size-set($w, $h) {
+  width: $w;
+  height: $h;
+}

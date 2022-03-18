@@ -1,0 +1,84 @@
+@import "../style//base.scss";
+.main {
+  position: relative;
+  @include size-set(100%, 100vh);
+  @include background-set();
+  .sns {
+    position: absolute;
+    @include size-set(80px, 80px);
+    background: white;
+  }
+  #kakao {
+    top: 25%;
+    left: 10%;
+  }
+  #git {
+    top: 45%;
+    left: 5%;
+  }
+  .cover {
+    position: absolute;
+    @include size-set(60vw, 65vh);
+    border: 3px solid skyblue;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.3);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    .title {
+      height: 80px;
+      text-align: center;
+      @include font-set(50px, $inner_txt);
+      line-height: 80px;
+      span {
+        color: white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+          1px 1px 0 #000;
+      }
+    }
+    .content {
+      @include size-set(100%, calc(100% - 80px));
+      display: flex;
+      .tradiv,
+      .festdiv,
+      .fooddiv {
+        position: relative;
+        @include size-set(100%, 90%);
+        border-radius: 30px;
+        border: 1px solid black;
+        &:not(:first-child),
+        &:not(:last-child) {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+        &:first-child {
+          margin-left: 15px;
+        }
+        &:last-child {
+          margin-right: 15px;
+        }
+        .nav {
+          color: black;
+          text-decoration: none;
+          @include font-set(40px, $inner_txt);
+          position: absolute;
+          bottom: 10%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      //   .tradiv:hover {
+      //     border: 2px solid red;
+      //   }
+      //   .festdiv:hover {
+      //     border: 2px solid blue;
+      //   }
+      //   .fooddiv:hover {
+      //     border: 2px solid green;
+      //   }
+    }
+  }
+}
